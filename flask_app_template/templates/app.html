@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+
+{% block additional_head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script type="text/javascript">
+        const username = "{{ user.preferred_username }}";
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div>
+        <h1>Trayectorias Suma y Sigue</h1>
+        <p>Esta es la página exclusiva para usuarios logeados.</p>
+        <button id="test_app_route">Conexión con Python (ver consola)</button>
+        <a href="/" target="_self">Volver</a>
+    </div>
+{% endblock %}

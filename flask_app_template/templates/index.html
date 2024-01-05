@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+
+{% block additional_head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    {% if logged_in %}
+        <script type="text/javascript">
+            const username = "{{ user.preferred_username }}";
+        </script>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <div>
+        <h1>Trayectorias Suma y Sigue</h1>
+        <p>Esta es la página principal</p>
+
+        {% if not logged_in %}
+            <a class="login-button" href="/login" target="_self"><i class="fa fa-user"></i> Iniciar sesión</a>
+        {% else %}
+            <a class="logout-button" href="/logout" target="_self">Cerrar sesión</a>
+            <a href="/app" target="_self">Ir a App</a>
+            <p>Email: {{ user.email }}</p>
+            <p>First Name: {{ user.given_name }}</p>
+            <p>Last Name: {{ user.family_name }}</p>
+            <p>Username: {{ user.preferred_username }}</p>
+        {% endif %}
+    </div>
+{% endblock %}

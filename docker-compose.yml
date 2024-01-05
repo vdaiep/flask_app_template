@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  flask_app_web:
+    build: .
+    container_name: flask_app_web
+    restart: unless-stopped
+    ports:
+      - "8689:8689"
+    volumes:
+      - ./data:/app/data
