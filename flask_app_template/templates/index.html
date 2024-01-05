@@ -12,14 +12,14 @@
 
 {% block content %}
     <div>
-        <h1>Trayectorias Suma y Sigue</h1>
-        <p>Esta es la página principal</p>
+        <h1>Sample Flask application</h1>
+        <p>This is the main page</p>
 
         {% if not logged_in %}
-            <a class="login-button" href="/login" target="_self"><i class="fa fa-user"></i> Iniciar sesión</a>
+            <a class="login-button" href="/login" target="_self"><i class="fa fa-user"></i> Log in</a>
         {% else %}
-            <a class="logout-button" href="/logout" target="_self">Cerrar sesión</a>
-            <a href="/app" target="_self">Ir a App</a>
+            <a class="logout-button" href="/logout" target="_self">Log out/a>
+            <a href="/app" target="_self">Go to App</a>
             <p>Email: {{ user.email }}</p>
             <p>First Name: {{ user.given_name }}</p>
             <p>Last Name: {{ user.family_name }}</p>

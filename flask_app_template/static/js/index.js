@@ -3,5 +3,5 @@ $(document).ready(function() {
 });
 
 function testMessageIndex(){
-    console.log("JS que se ejecuta cuando se carga la ruta /")
+    console.log("This is executed each time route / is loaded")
 }

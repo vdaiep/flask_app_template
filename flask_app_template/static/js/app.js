@@ -6,7 +6,7 @@ $(document).ready(function() {
 });
 
 function testMessageApp(){
-    console.log("JS que se ejecuta cuando se carga la ruta /app");
+    console.log("This is executed each time route /app is loaded");
 }
 
 function testAppRoute() {

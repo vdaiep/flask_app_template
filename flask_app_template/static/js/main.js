@@ -3,5 +3,5 @@ $(document).ready(function() {
 });
 
 function testMessage(){
-    console.log("JS principal que corre cuando se carga cualquier ruta")
+    console.log("This is executed each time any route is loaded")
 }
