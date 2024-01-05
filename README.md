@@ -1,6 +1,6 @@
 # Flask App Template
 
-### Ejecutar en modo desarrollo:
+### Run:
 
 ```bash
 pip install -r requirements.txt
